@@ -9,32 +9,39 @@ const ProfileContent = () => {
         "State & Nav": ["Redux Toolkit", "Context API", "React Navigation v6"],
         "Backend": ["Java 8", "Spring Boot", "RESTful APIs", "Hibernate"],
         "Database": ["Oracle", "MySQL"],
-        "Tools": ["Git", "GitHub", "Postman", "Firebase", "Fastlane"]
+        "Tools": ["Git", "GitHub", "Postman", "Firebase"]
     };
 
     const experiences = [
         {
             role: "React Native Developer",
-            company: "Avanexa Technologies, Coimbatore",
+            company: "Avanexa Technologies",
             date: "March 2025 – Present",
             projects: [
-                { name: "Albion Bank Auctions", desc: "Specialized app for bank property auctions with deep linking and third-party payment APIs." },
-                { name: "Wall360 – Real Estate", desc: "Rental platform for PG, house & commercial properties with Firebase, Razorpay & Maps." },
-                { name: "Cignix", desc: "Health Habit Tracker with streaks, reminders, and user engagement features." },
-                { name: "Truck Taxi", desc: "Logistics booking app with map integration for route tracking and planning." },
-                { name: "AATHIRAA – FinTech", desc: "UPI, Fastag, Bill Pay, Bank Transfer modules with React Navigation v6 deep linking." },
-                { name: "Rudra Traders (B2B)", desc: "Built full app from scratch with custom UI. Complex payment integrations, tight deadline." }
+                { name: "Athlex (B2B Wholesale)", desc: "Built full app from scratch with custom UI. Handled complex payment integrations and tight deadlines." },
+                { name: "Albion Bank Auctions", desc: "Specialized app for bank property auctions, integrating deep linking and third-party payment APIs." },
+                { name: "Wall360 – Real Estate", desc: "Rental platform for PG, house & commercial properties with Firebase, Razorpay & Google Maps." },
+                { name: "Cignix – Health Tracker", desc: "Habit tracker focused on user engagement, streaks, and reminders." },
+                { name: "Truck Taxi", desc: "Logistics solution with map integration for location tracking and route planning." },
+                { name: "AATHIRAA – FinTech", desc: "Utility app with UPI, Fastag, Bill Pay, and Bank Transfer modules using React Navigation v6." }
             ]
         },
         {
             role: "React Native Developer",
-            company: "AllDirectionSource Technologies, Chennai",
+            company: "AllDirectionSource Technologies Private Limited",
             date: "August 2024 – February 2025",
             projects: [
-                { name: "Urja – EdTech Wellness", desc: "Children & parent wellness app with gamified learning, badges, streaks & Redux Toolkit." },
-                { name: "AdsMail", desc: "Gmail-based platform for custom domain emails with Android, iOS & Web support." },
-                { name: "Fettello – Healthcare", desc: "Doctor consultation app with appointment booking and pharmaceutical purchases." }
+                { name: "Urja – EdTech Wellness", desc: "Interactive wellness app for children & parents with gamified learning, progress tracking, and Redux Toolkit." },
+                { name: "AdsMail", desc: "Gmail-based platform for custom domain emails with Android, iOS, Web, and Admin panels." },
+                { name: "Fettello – Healthcare", desc: "Doctor consultation app with appointment booking and online medical services." }
             ]
+        }
+    ];
+
+    const certifications = [
+        {
+            course: "Java Fullstack Development",
+            institute: "QSpiders Velachery"
         }
     ];
 
@@ -54,7 +61,7 @@ const ProfileContent = () => {
                             My<br />Portfolio
                         </h1>
                         <p className="hero-desc">
-                            A passionate React Native developer with 1 year 7 months of experience building scalable cross-platform mobile applications. Strong foundation in Java full-stack development.
+                            A passionate React Native developer with 2 years of experience building scalable cross-platform mobile applications. Strong foundation in Java full-stack development.
                         </p>
                         <div className="hero-cta">
                             <a href="#experience" className="btn-primary">Explore Now</a>
@@ -113,10 +120,27 @@ const ProfileContent = () => {
                 </div>
             </section>
 
-            {/* ─── EDUCATION ─── */}
-            <section id="education" className="dark-section">
+            {/* ─── CERTIFICATIONS ─── */}
+            <section id="certifications" className="dark-section">
                 <div className="section-inner">
-                    <div className="section-label">04 – Education</div>
+                    <div className="section-label">04 – Certifications</div>
+                    <h2 className="section-heading">Professional Training</h2>
+                    <div className="edu-row">
+                        {certifications.map((cert, i) => (
+                            <div key={i} className="edu-card">
+                                <span className="edu-year">Certification</span>
+                                <h3>{cert.course}</h3>
+                                <p>{cert.institute}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ─── EDUCATION ─── */}
+            <section id="education" className="dark-section alt-bg">
+                <div className="section-inner">
+                    <div className="section-label">05 – Education</div>
                     <h2 className="section-heading">Academic Background</h2>
                     <div className="edu-row">
                         <div className="edu-card">
