@@ -1,0 +1,457 @@
+/* ── PORTFOLIO WRAPPER ── */
+.portfolio-wrapper {
+    width: 100%;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ═══ HERO SPLIT ═══ */
+.hero-split {
+    display: flex;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+/* LEFT PANEL */
+.hero-left {
+    width: 42%;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* ── PROFILE IMAGE ── */
+.profile-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    z-index: 1;
+    filter: grayscale(30%);
+    transition: filter 0.4s ease;
+}
+
+.profile-img:hover {
+    filter: grayscale(0%);
+}
+
+/* Subtle right-edge fade so the image blends into the dark right panel */
+.profile-img-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(to right, transparent 55%, rgba(17, 17, 17, 0.85) 100%),
+        linear-gradient(to bottom, transparent 80%, rgba(17, 17, 17, 0.4) 100%);
+    pointer-events: none;
+}
+
+/* RIGHT PANEL */
+.hero-right {
+    width: 58%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 7%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero-line {
+    width: 120px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 0 0 1.8rem 0;
+}
+
+.hero-greeting {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.hero-name {
+    font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+    font-weight: 900;
+    letter-spacing: clamp(-1px, -0.03em, -2px);
+    color: #fff;
+    line-height: 1;
+}
+
+.hero-role {
+    margin-top: 0.6rem;
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(99, 102, 241, 0.85);
+}
+
+.hero-desc {
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 480px;
+    margin-bottom: 3rem;
+}
+
+.hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    padding: 0.85rem 2.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    background: transparent;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: #111;
+}
+
+.btn-play {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.btn-play:hover {
+    color: #fff;
+}
+
+.play-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-play:hover .play-circle {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.page-num {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* ═══ DARK SECTIONS ═══ */
+.dark-section {
+    background: #111;
+    padding: 6rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dark-section.alt-bg {
+    background: #141414;
+}
+
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.section-label {
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 1rem;
+}
+
+.section-heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #fff;
+    margin: 0 0 4rem 0;
+}
+
+/* ─── EXPERIENCE ─── */
+.exp-block {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.exp-block:last-child {
+    border-bottom: none;
+}
+
+.exp-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0.6rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.exp-date {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 500;
+}
+
+.exp-company {
+    font-size: 0.8rem;
+    color: rgba(99, 102, 241, 0.8);
+    font-weight: 600;
+}
+
+.exp-role {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 2rem 0;
+}
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.proj-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.proj-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.proj-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #6366f1;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.proj-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.proj-card p {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ─── SKILLS ─── */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill-cat {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tag {
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+    background: transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.tag:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+}
+
+/* ─── EDUCATION ─── */
+.edu-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.edu-card {
+    flex: 1;
+    min-width: 260px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.edu-year {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(99, 102, 241, 0.8);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.edu-card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.edu-card p {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.edu-cgpa {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ─── CONTACT FOOTER ─── */
+.contact-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.contact-info span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-info a {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover {
+    color: #fff;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-left {
+        width: 100%;
+        height: auto;
+        background: #111;
+        display: block;
+    }
+
+    .profile-img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .profile-img-glow {
+        background:
+            linear-gradient(to bottom, transparent 80%, rgba(17, 17, 17, 1) 100%);
+    }
+
+    .hero-right {
+        width: 100%;
+        padding: 3rem 2rem 4rem;
+    }
+
+    .page-num {
+        display: none;
+    }
+
+    .hero-name {
+        font-size: clamp(2.4rem, 10vw, 3.5rem);
+        letter-spacing: -1px;
+    }
+
+    .hero-greeting {
+        font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    }
+
+    .hero-role {
+        font-size: clamp(0.65rem, 2.5vw, 0.8rem);
+        letter-spacing: 2px;
+    }
+
+    .exp-meta {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
