@@ -61,7 +61,7 @@ const ProfileContent = () => {
                             My<br />Portfolio
                         </h1>
                         <p className="hero-desc">
-                            A passionate React Native developer with 2 years of experience building scalable cross-platform mobile applications. Strong foundation in Java full-stack development.
+                            A passionate React Native developer with 1 Year 7 Months of experience building scalable cross-platform mobile applications. Strong foundation in Java full-stack development.
                         </p>
                         <div className="hero-cta">
                             <a href="#experience" className="btn-primary">Explore Now</a>
